@@ -141,75 +141,11 @@
             Join Akshaya Patra and help people through food sharing.
         </p>
 
-
-        <form id="signupForm">
-
-
-            <label>Full Name</label>
-
-            <input type="text"
-                   placeholder="Enter your full name"
-                   required>
-
-
-            <label>Email</label>
-
-            <input type="email"
-                   placeholder="Enter your email"
-                   required>
-
-
-            <label>Phone Number</label>
-
-            <input type="tel"
-                   placeholder="Enter your phone number"
-                   required>
-
-
-            <label>Donor Type</label>
-
-            <select required>
-
-                <option value="">Select Donor Type</option>
-
-                <option>Individual</option>
-
-                <option>Restaurant</option>
-
-                <option>Hotel</option>
-
-                <option>Organization</option>
-
-            </select>
-
-
-            <label>City</label>
-
-            <input type="text"
-                   placeholder="Enter your city"
-                   required>
-
-
-            <label>Address</label>
-
-            <textarea
-                placeholder="Enter your address"
-                required></textarea>
-
-
-            <label>Password</label>
-
-            <input type="password"
-                   placeholder="Create a password"
-                   required>
-
-
-            <button class="register" type="submit">
-                Create Account
-            </button>
-
-
-        </form>
+<form id="signupForm" onsubmit="handleSignUp(event)">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <button type="submit">Create Account</button>
+    </form>git add .
 
 
         <a href="index.html" class="home">
@@ -255,16 +191,12 @@
 
     <!-- JavaScript -->
 
-    <script>
-
-        document.getElementById("signupForm").onsubmit = function(event) {
-
-            event.preventDefault();
-
-            document.getElementById("successMessage").style.display = "block";
-
-        };
-
+   <script>
+      function handleSignUp(event) {
+        event.preventDefault(); // Prevents page reload
+        alert("Registration Successful!");
+        window.location.href = "index.html"; // Redirects to home page
+      }
     </script>
 
 
